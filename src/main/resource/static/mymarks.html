@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr" xmlns:th="http://www.w3.org/1999/xhtml">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="C:\Skills\Web Development\PCMmarksproject\proj1.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Asul:wght@700&family=EB+Garamond:wght@600&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet"><meta charset="utf-8">
+    <title>Student Marks Card </title>
+    <style media="screen">
+    body{
+      background-color: white;
+      font-family: 'Playfair Display', serif;
+    }
+    .topborder{
+      height: 3.5%;
+      width: 55%;
+      margin-left: 22.5%;
+      margin-bottom: 0;
+    }
+    .header{
+      width: 80%;
+      height: 20%;
+      background-color: #84a9ac;
+      margin-left: 10%;
+      margin-bottom: 0;
+      margin-top: 1.5%;
+      text-align: center;
+      padding: 1%;
+      color: #f69e7b;
+    }
+    .vr1 {
+        background-color: #204051;
+        position: rotate(90deg);
+        position:absolute;
+        margin-top: 0;
+        top: 0;
+        width:1%;
+        height:100%;
+        border:1px;
+        left: 5%;
+    }
+    .vr2 {
+        background-color: #204051;
+        position: rotate(90deg);
+        position:absolute;
+        margin-top: 0;
+        top: 0;
+        right: 5%;
+        width:1%;
+        height:100%;
+        border:1px;
+    }
+    table{
+      font-family: 'Asul', sans-serif;
+      text-align: center;
+      position: absolute;
+      color: white;
+      width: 80%;
+      height: 80%;
+      border: 5px solid white;
+      border-color: white;
+      margin-left: 10%;
+      margin-top: 1.25%;
+      margin-bottom: 1.25%;
+    }
+    td{
+      text-align: center;
+      border-left: 5px solid white;
+      border-right: 5px solid white;
+      border-top: 2px solid white;
+    }
+    .result{
+      margin-left: 10%;
+      position:absolute;
+      height: 30%;
+      width: 80%;
+      background-color: #3b6978;
+    }
+    .info{
+      color: white;
+      margin-left: 10%;
+      position:absolute;
+      height: 20%;
+      width: 80%;
+      margin-top: 14.5%;
+      background-color: #204051;
+ 
+      line-height: 0.75rem;
+    }
+    p{
+      margin-left: 10%;
+      margin-top: 0.75rem;
+    }
+ 
+    </style>
+  </head>
+  <body>
+    <hr class="vr1">
+    <hr class="vr2">
+    <div class="header">
+      <h1>Marks Card</h1>
+      <br>
+      <h5>The below table mentions your performance.</h5>
+    </div>
+ 
+    <div class="result">
+      <table>
+       <tr>
+         <td>Names</td>
+         <td>Semester</td>
+         <td>English</td>
+         <td>Science</td>
+         <td>Maths</td>
+         <td>Total</td>
+         <td>Average</td>
+         <td>Grade</td>
+
+       </tr>
+       <tr>
+         <td th:text="${marks.name}"></td>
+         <td th:text="${marks.semester}"></td>
+         <td th:text="${marks.english}"></td>
+         <td th:text="${marks.science}"></td>
+         <td th:text="${marks.maths}"></td>
+         <td th:text="${marks.total}"></td>
+         <td th:text="${marks.average}"></td>
+         <td th:text="${marks.grade}"></td>
+
+       </tr>
+ 
+     </table>
+    </div>
+    <div class="info">
+        <p>Grade A | Greater than 80% </p>
+        <p>Grade B | Between 50% and 80% </p>
+        <p>Grade C | Less than 50%</p>
+    </div>
+ 
+  </body>
+</html>
