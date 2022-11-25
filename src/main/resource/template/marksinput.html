@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lemon&family=Simonetta:wght@900&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Student Report Card</title>
+    <style media="screen">
+      h3{
+        padding: 2rem;
+        background-color: #3b6978;
+        color: #204051;
+        font-family: 'Lemon', cursive;
+      }
+      body{
+        background-color: #ddf3f5;
+      }
+      .inputdiv{
+        border-radius: 5%;
+        position: relative;
+        left: 18%;
+        top: 2rem;
+        height: 20%;
+        width: 60%;
+        font-family: 'Simonetta', cursive;
+        text-align: center;
+        background-color: #204051;
+        margin: 2.5rem;
+        color: white;
+        font-size: 1.25rem;
+        font-weight: bolder;
+      }
+      .input{
+        height: 2rem;
+        width: 5rem;
+        padding: 1rem;
+      }
+      .btn{
+        font-family: 'Lemon', cursive;
+        position: absolute;
+        left: 31%;
+        height: 3rem;
+        width: 17rem;
+        margin: 2rem;
+        font-size: 1.25rem;
+        font-weight: bolder;
+        margin-top: 2.5rem;
+      }
+ 
+    </style>
+  </head>
+  <body>
+    <div class="inputdiv">
+      <h3>Kindly enter your marks below</h3>
+      <br>
+        <form name="input"  method="get" action="marks-output-html">
+            <p>Please enter your Name here   |
+                <input type="text" id="marks.name" name="name" required></p>
+            <p>Please enter your Semester here   |
+                <input  class="input" type="number" min="1" max="2" id="marks.semester" name="semester"  pattern="[0-9]+" title="Only Numerical Inputs Allowed" required></p>
+          <p>Please enter your English marks here   |
+              <input  class="input" type="number" step="0.25" min="0" max="100" id="marks.english" name="english"  pattern="[0-9]+" title="Only Numerical Inputs Allowed" required></p>
+          <p>Please enter your Science marks here   |
+              <input  class="input" type="number" step="0.25" min="0" max="100" id="marks.science" name="science"  pattern="[0-9]+" title="Only Numerical Inputs Allowed" required></p>
+          <p>Please enter your Mathematics marks here   |
+              <input  class="input" type="number" step="0.25" min="0" max="100" id="marks.maths" name="maths"  pattern="[0-9]+" title="Only Numerical Inputs Allowed" required></p>
+              <br></br>
+              <button class="btn btn-outline-info" type="submit">Click Here to Submit</button>
+            </form>
+        <br>
+    </div>
+    
+ 
+ 
+ 
+  </body>
+</html>
